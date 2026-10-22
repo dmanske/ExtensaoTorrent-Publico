@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Prévia Torrent",
+  "version": "0.1.1",
+  "description": "Mostra a capa do torrent ao parar o mouse no link, sem abrir a página, com botão para baixar o .torrent.",
+  "content_scripts": [
+    {
+      "matches": ["https://*.torrentleech.org/*", "https://*.pussytorrents.org/*"],
+      "js": ["config.js", "previa.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": { "id": "previa-torrent@manske", "strict_min_version": "128.0" }
+  }
+}
